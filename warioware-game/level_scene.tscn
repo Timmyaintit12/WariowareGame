@@ -1,3 +1,67 @@
 [gd_scene format=3 uid="uid://b1vco8j644jsb"]
 
+[ext_resource type="Script" uid="uid://c7gr8ndbfncoe" path="res://timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://d1fkhvymxq7ao" path="res://forest.jpg" id="1_187gu"]
+[ext_resource type="Texture2D" uid="uid://cwehrigqguyqw" path="res://heart.png" id="2_187gu"]
+
 [node name="Node2D" type="Node2D" unique_id=2053301770]
+script = ExtResource("1_3mivm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1740447563]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_187gu")
+expand_mode = 1
+
+[node name="HeartContainer" type="HBoxContainer" parent="." unique_id=1915465973]
+offset_left = 356.0
+offset_top = 251.0
+offset_right = 457.0
+offset_bottom = 331.0
+
+[node name="Heart" type="TextureRect" parent="HeartContainer" unique_id=75265941]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+expand_mode = 3
+
+[node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=1248291779]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+expand_mode = 3
+
+[node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=1965513820]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+expand_mode = 3
+
+[node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=2034253585]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+expand_mode = 3
+
+[node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=2134734423]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+expand_mode = 3
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=2094610466]
+offset_left = 522.0
+offset_top = 354.0
+offset_right = 692.0
+offset_bottom = 421.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=381659290]
+offset_left = 549.0
+offset_top = 536.0
+offset_right = 643.0
+offset_bottom = 598.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
