@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddtqwq53a0wuq"]
+
+[ext_resource type="Script" uid="uid://ce1vgjq8pe0uf" path="res://Scripts/game_timer.gd" id="1_xyruv"]
+
+[node name="Node2D" type="Node2D" unique_id=48597511]
+script = ExtResource("1_xyruv")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1012696809]
+offset_right = 40.0
+offset_bottom = 40.0

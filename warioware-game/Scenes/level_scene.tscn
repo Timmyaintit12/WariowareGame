@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://b1vco8j644jsb"]
 
-[ext_resource type="Script" uid="uid://c7gr8ndbfncoe" path="res://timer_screen.gd" id="1_3mivm"]
-[ext_resource type="Texture2D" uid="uid://d1fkhvymxq7ao" path="res://forest.jpg" id="1_187gu"]
-[ext_resource type="Texture2D" uid="uid://cwehrigqguyqw" path="res://heart.png" id="2_187gu"]
+[ext_resource type="Script" uid="uid://c7gr8ndbfncoe" path="res://Scripts/timer_screen.gd" id="1_c7xwe"]
+[ext_resource type="Texture2D" uid="uid://d1fkhvymxq7ao" path="res://Images/forest.jpg" id="2_2fcgv"]
+[ext_resource type="Texture2D" uid="uid://cwehrigqguyqw" path="res://Images/heart.png" id="3_qnqh0"]
 
 [node name="Node2D" type="Node2D" unique_id=2053301770]
-script = ExtResource("1_3mivm")
+script = ExtResource("1_c7xwe")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1740447563]
 offset_right = 1154.0
 offset_bottom = 651.0
-texture = ExtResource("1_187gu")
+texture = ExtResource("2_2fcgv")
 expand_mode = 1
 
 [node name="HeartContainer" type="HBoxContainer" parent="." unique_id=1915465973]
@@ -21,27 +21,27 @@ offset_bottom = 331.0
 
 [node name="Heart" type="TextureRect" parent="HeartContainer" unique_id=75265941]
 layout_mode = 2
-texture = ExtResource("2_187gu")
+texture = ExtResource("3_qnqh0")
 expand_mode = 3
 
 [node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=1248291779]
 layout_mode = 2
-texture = ExtResource("2_187gu")
+texture = ExtResource("3_qnqh0")
 expand_mode = 3
 
 [node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=1965513820]
 layout_mode = 2
-texture = ExtResource("2_187gu")
+texture = ExtResource("3_qnqh0")
 expand_mode = 3
 
 [node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=2034253585]
 layout_mode = 2
-texture = ExtResource("2_187gu")
+texture = ExtResource("3_qnqh0")
 expand_mode = 3
 
 [node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=2134734423]
 layout_mode = 2
-texture = ExtResource("2_187gu")
+texture = ExtResource("3_qnqh0")
 expand_mode = 3
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=2094610466]

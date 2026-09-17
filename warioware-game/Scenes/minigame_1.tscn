@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://k5y11xnv34k6"]
+
+[ext_resource type="Texture2D" uid="uid://su8q2j0ojo3a" path="res://Images/sky.jpg" id="1_enoba"]
+[ext_resource type="PackedScene" uid="uid://bww63ahbbvmhj" path="res://Scenes/Player.tscn" id="2_11mgy"]
+[ext_resource type="Texture2D" uid="uid://dagyh02bbin0y" path="res://Images/mushroom.png" id="3_f6tb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wtki"]
+size = Vector2(1195.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwghp"]
+size = Vector2(506, 39)
+
+[sub_resource type="Animation" id="Animation_f6tb2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mushroom:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, -14)]
+}
+
+[sub_resource type="Animation" id="Animation_o6yob"]
+resource_name = "floating"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mushroom:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-15, -14), Vector2(-15, -22)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5txvl"]
+_data = {
+&"RESET": SubResource("Animation_f6tb2"),
+&"floating": SubResource("Animation_o6yob")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kwghp"]
+radius = 19.026299
+
+[node name="Minigame_1" type="Node2D" unique_id=966255415]
+position = Vector2(5, 642)
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1939420379]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=911412692]
+offset_top = -636.0
+offset_right = 1144.0
+offset_bottom = 11.0
+texture = ExtResource("1_enoba")
+expand_mode = 1
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=2078635739]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1455014339]
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 1162.0
+offset_bottom = 20.0
+color = Color(1, 0.41568628, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=482852569]
+position = Vector2(567, 0)
+shape = SubResource("RectangleShape2D_2wtki")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1200813895]
+position = Vector2(530, -114)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=515678991]
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 475.0
+offset_bottom = 20.0
+color = Color(1, 0.41568628, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1240253414]
+position = Vector2(223, -0.5)
+shape = SubResource("RectangleShape2D_kwghp")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=395353575]
+position = Vector2(275, -262)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=66097218]
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 475.0
+offset_bottom = 20.0
+color = Color(1, 0.41568628, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=976508671]
+position = Vector2(223, -0.5)
+shape = SubResource("RectangleShape2D_kwghp")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=434723495]
+position = Vector2(29, -403)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1665577916]
+offset_left = -30.0
+offset_top = -22.0
+offset_right = 475.0
+offset_bottom = 18.0
+color = Color(1, 0.41568628, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=751180923]
+position = Vector2(223, -0.5)
+shape = SubResource("RectangleShape2D_kwghp")
+
+[node name="Platform5" type="StaticBody2D" parent="." unique_id=834605649]
+position = Vector2(445, -551)
+
+[node name="ColorRect" type="ColorRect" parent="Platform5" unique_id=64357114]
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 475.0
+offset_bottom = 20.0
+color = Color(1, 0.41568628, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=306814777]
+position = Vector2(223, -0.5)
+shape = SubResource("RectangleShape2D_kwghp")
+
+[node name="Player" parent="." unique_id=862217075 instance=ExtResource("2_11mgy")]
+position = Vector2(110, -93)
+
+[node name="Mushroom" type="Node2D" parent="." unique_id=460964428]
+position = Vector2(1083, -41)
+
+[node name="Mushroom" type="TextureRect" parent="Mushroom" unique_id=1294281838]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 18.350765
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="Mushroom" unique_id=995015452]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="Mushroom" unique_id=1990723743]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom/Area2D" unique_id=82351444]
+shape = SubResource("CircleShape2D_kwghp")
+
+[node name="Mushroom2" type="Node2D" parent="." unique_id=1835382633]
+position = Vector2(523, -156)
+
+[node name="Mushroom" type="TextureRect" parent="Mushroom2" unique_id=1528624169]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 18.350765
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="Mushroom2" unique_id=427509264]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="Mushroom2" unique_id=1578685183]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom2/Area2D" unique_id=1933657489]
+shape = SubResource("CircleShape2D_kwghp")
+
+[node name="Mushroom3" type="Node2D" parent="." unique_id=781068110]
+position = Vector2(719, -309)
+
+[node name="Mushroom" type="TextureRect" parent="Mushroom3" unique_id=1940708533]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 18.350765
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="Mushroom3" unique_id=1669085100]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="Mushroom3" unique_id=1875991413]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom3/Area2D" unique_id=552187920]
+shape = SubResource("CircleShape2D_kwghp")
+
+[node name="Mushroom4" type="Node2D" parent="." unique_id=548965826]
+position = Vector2(280, -309)
+
+[node name="Mushroom" type="TextureRect" parent="Mushroom4" unique_id=1761894679]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 18.350765
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="Mushroom4" unique_id=1242499116]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="Mushroom4" unique_id=1593281162]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom4/Area2D" unique_id=979421060]
+shape = SubResource("CircleShape2D_kwghp")
+
+[node name="Mushroom5" type="Node2D" parent="." unique_id=1735733416]
+position = Vector2(33, -453)
+
+[node name="Mushroom" type="TextureRect" parent="Mushroom5" unique_id=685499833]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 18.350765
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="Mushroom5" unique_id=1293871773]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="Mushroom5" unique_id=1920876448]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom5/Area2D" unique_id=2131490921]
+shape = SubResource("CircleShape2D_kwghp")
+
+[node name="Mushroom6" type="Node2D" parent="." unique_id=933534859]
+position = Vector2(893, -595)
+
+[node name="Mushroom" type="TextureRect" parent="Mushroom6" unique_id=549186046]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 18.350765
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="animation" type="AnimationPlayer" parent="Mushroom6" unique_id=1560973803]
+libraries/ = SubResource("AnimationLibrary_5txvl")
+autoplay = &"floating"
+
+[node name="Area2D" type="Area2D" parent="Mushroom6" unique_id=106508581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom6/Area2D" unique_id=1539450685]
+shape = SubResource("CircleShape2D_kwghp")
