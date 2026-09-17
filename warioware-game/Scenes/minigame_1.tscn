@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://k5y11xnv34k6"]
 
+[ext_resource type="Script" uid="uid://f2bdbtrlens0" path="res://Scripts/minigame_1.gd" id="1_0uv5o"]
 [ext_resource type="Texture2D" uid="uid://su8q2j0ojo3a" path="res://Images/sky.jpg" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://bww63ahbbvmhj" path="res://Scenes/Player.tscn" id="2_11mgy"]
+[ext_resource type="Script" uid="uid://d0ltyu531kf6w" path="res://Scripts/mushroom.gd" id="3_5txvl"]
 [ext_resource type="Texture2D" uid="uid://dagyh02bbin0y" path="res://Images/mushroom.png" id="3_f6tb2"]
+[ext_resource type="PackedScene" uid="uid://ddtqwq53a0wuq" path="res://Scenes/game_timer.tscn" id="5_0uv5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wtki"]
 size = Vector2(1195.5, 40)
@@ -52,6 +55,7 @@ radius = 19.026299
 
 [node name="Minigame_1" type="Node2D" unique_id=966255415]
 position = Vector2(5, 642)
+script = ExtResource("1_0uv5o")
 
 [node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1939420379]
 repeat_size = Vector2(1000, 0)
@@ -138,6 +142,7 @@ position = Vector2(110, -93)
 
 [node name="Mushroom" type="Node2D" parent="." unique_id=460964428]
 position = Vector2(1083, -41)
+script = ExtResource("3_5txvl")
 
 [node name="Mushroom" type="TextureRect" parent="Mushroom" unique_id=1294281838]
 offset_left = -15.0
@@ -159,6 +164,7 @@ shape = SubResource("CircleShape2D_kwghp")
 
 [node name="Mushroom2" type="Node2D" parent="." unique_id=1835382633]
 position = Vector2(523, -156)
+script = ExtResource("3_5txvl")
 
 [node name="Mushroom" type="TextureRect" parent="Mushroom2" unique_id=1528624169]
 offset_left = -15.0
@@ -180,6 +186,7 @@ shape = SubResource("CircleShape2D_kwghp")
 
 [node name="Mushroom3" type="Node2D" parent="." unique_id=781068110]
 position = Vector2(719, -309)
+script = ExtResource("3_5txvl")
 
 [node name="Mushroom" type="TextureRect" parent="Mushroom3" unique_id=1940708533]
 offset_left = -15.0
@@ -201,6 +208,7 @@ shape = SubResource("CircleShape2D_kwghp")
 
 [node name="Mushroom4" type="Node2D" parent="." unique_id=548965826]
 position = Vector2(280, -309)
+script = ExtResource("3_5txvl")
 
 [node name="Mushroom" type="TextureRect" parent="Mushroom4" unique_id=1761894679]
 offset_left = -15.0
@@ -222,6 +230,7 @@ shape = SubResource("CircleShape2D_kwghp")
 
 [node name="Mushroom5" type="Node2D" parent="." unique_id=1735733416]
 position = Vector2(33, -453)
+script = ExtResource("3_5txvl")
 
 [node name="Mushroom" type="TextureRect" parent="Mushroom5" unique_id=685499833]
 offset_left = -15.0
@@ -243,6 +252,7 @@ shape = SubResource("CircleShape2D_kwghp")
 
 [node name="Mushroom6" type="Node2D" parent="." unique_id=933534859]
 position = Vector2(893, -595)
+script = ExtResource("3_5txvl")
 
 [node name="Mushroom" type="TextureRect" parent="Mushroom6" unique_id=549186046]
 offset_left = -15.0
@@ -261,3 +271,6 @@ autoplay = &"floating"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom6/Area2D" unique_id=1539450685]
 shape = SubResource("CircleShape2D_kwghp")
+
+[node name="GameTimer" parent="." unique_id=48597511 instance=ExtResource("5_0uv5o")]
+position = Vector2(1015, -620)

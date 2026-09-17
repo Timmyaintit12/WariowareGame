@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ce1vgjq8pe0uf" path="res://Scripts/game_timer.gd" id="1_xyruv"]
 
-[node name="Node2D" type="Node2D" unique_id=48597511]
+[node name="GameTimer" type="Node2D" unique_id=48597511]
 script = ExtResource("1_xyruv")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=1012696809]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 131.0
+offset_bottom = 87.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 47
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
