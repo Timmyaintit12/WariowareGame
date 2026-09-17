@@ -162,11 +162,11 @@ autoplay = &"floating"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom/Area2D" unique_id=82351444]
 shape = SubResource("CircleShape2D_kwghp")
 
-[node name="Mushroom2" type="Node2D" parent="." unique_id=1835382633]
-position = Vector2(523, -156)
+[node name="Mushroom2" type="Node2D" parent="." unique_id=828422945]
+position = Vector2(542, -166)
 script = ExtResource("3_5txvl")
 
-[node name="Mushroom" type="TextureRect" parent="Mushroom2" unique_id=1528624169]
+[node name="Mushroom" type="TextureRect" parent="Mushroom2" unique_id=2060250707]
 offset_left = -15.0
 offset_top = -14.0
 offset_right = 16.0
@@ -175,20 +175,20 @@ texture = ExtResource("3_f6tb2")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animation" type="AnimationPlayer" parent="Mushroom2" unique_id=427509264]
+[node name="animation" type="AnimationPlayer" parent="Mushroom2" unique_id=277906284]
 libraries/ = SubResource("AnimationLibrary_5txvl")
 autoplay = &"floating"
 
-[node name="Area2D" type="Area2D" parent="Mushroom2" unique_id=1578685183]
+[node name="Area2D" type="Area2D" parent="Mushroom2" unique_id=1207659978]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom2/Area2D" unique_id=1933657489]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom2/Area2D" unique_id=2042237918]
 shape = SubResource("CircleShape2D_kwghp")
 
-[node name="Mushroom3" type="Node2D" parent="." unique_id=781068110]
-position = Vector2(719, -309)
+[node name="Mushroom3" type="Node2D" parent="." unique_id=581048659]
+position = Vector2(294, -307)
 script = ExtResource("3_5txvl")
 
-[node name="Mushroom" type="TextureRect" parent="Mushroom3" unique_id=1940708533]
+[node name="Mushroom" type="TextureRect" parent="Mushroom3" unique_id=2079878149]
 offset_left = -15.0
 offset_top = -14.0
 offset_right = 16.0
@@ -197,20 +197,20 @@ texture = ExtResource("3_f6tb2")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animation" type="AnimationPlayer" parent="Mushroom3" unique_id=1669085100]
+[node name="animation" type="AnimationPlayer" parent="Mushroom3" unique_id=1291873936]
 libraries/ = SubResource("AnimationLibrary_5txvl")
 autoplay = &"floating"
 
-[node name="Area2D" type="Area2D" parent="Mushroom3" unique_id=1875991413]
+[node name="Area2D" type="Area2D" parent="Mushroom3" unique_id=1459770535]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom3/Area2D" unique_id=552187920]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom3/Area2D" unique_id=1766353768]
 shape = SubResource("CircleShape2D_kwghp")
 
-[node name="Mushroom4" type="Node2D" parent="." unique_id=548965826]
-position = Vector2(280, -309)
+[node name="Mushroom4" type="Node2D" parent="." unique_id=214160336]
+position = Vector2(692, -316)
 script = ExtResource("3_5txvl")
 
-[node name="Mushroom" type="TextureRect" parent="Mushroom4" unique_id=1761894679]
+[node name="Mushroom" type="TextureRect" parent="Mushroom4" unique_id=279752111]
 offset_left = -15.0
 offset_top = -14.0
 offset_right = 16.0
@@ -219,20 +219,20 @@ texture = ExtResource("3_f6tb2")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animation" type="AnimationPlayer" parent="Mushroom4" unique_id=1242499116]
+[node name="animation" type="AnimationPlayer" parent="Mushroom4" unique_id=305972904]
 libraries/ = SubResource("AnimationLibrary_5txvl")
 autoplay = &"floating"
 
-[node name="Area2D" type="Area2D" parent="Mushroom4" unique_id=1593281162]
+[node name="Area2D" type="Area2D" parent="Mushroom4" unique_id=1969415270]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom4/Area2D" unique_id=979421060]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom4/Area2D" unique_id=327886926]
 shape = SubResource("CircleShape2D_kwghp")
 
-[node name="Mushroom5" type="Node2D" parent="." unique_id=1735733416]
-position = Vector2(33, -453)
+[node name="Mushroom5" type="Node2D" parent="." unique_id=359595890]
+position = Vector2(35, -450)
 script = ExtResource("3_5txvl")
 
-[node name="Mushroom" type="TextureRect" parent="Mushroom5" unique_id=685499833]
+[node name="Mushroom" type="TextureRect" parent="Mushroom5" unique_id=1910604663]
 offset_left = -15.0
 offset_top = -14.0
 offset_right = 16.0
@@ -241,20 +241,20 @@ texture = ExtResource("3_f6tb2")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animation" type="AnimationPlayer" parent="Mushroom5" unique_id=1293871773]
+[node name="animation" type="AnimationPlayer" parent="Mushroom5" unique_id=84475738]
 libraries/ = SubResource("AnimationLibrary_5txvl")
 autoplay = &"floating"
 
-[node name="Area2D" type="Area2D" parent="Mushroom5" unique_id=1920876448]
+[node name="Area2D" type="Area2D" parent="Mushroom5" unique_id=2122950903]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom5/Area2D" unique_id=2131490921]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom5/Area2D" unique_id=885967202]
 shape = SubResource("CircleShape2D_kwghp")
 
-[node name="Mushroom6" type="Node2D" parent="." unique_id=933534859]
-position = Vector2(893, -595)
+[node name="Mushroom6" type="Node2D" parent="." unique_id=437369907]
+position = Vector2(879, -595)
 script = ExtResource("3_5txvl")
 
-[node name="Mushroom" type="TextureRect" parent="Mushroom6" unique_id=549186046]
+[node name="Mushroom" type="TextureRect" parent="Mushroom6" unique_id=1108458029]
 offset_left = -15.0
 offset_top = -14.0
 offset_right = 16.0
@@ -263,14 +263,21 @@ texture = ExtResource("3_f6tb2")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="animation" type="AnimationPlayer" parent="Mushroom6" unique_id=1560973803]
+[node name="animation" type="AnimationPlayer" parent="Mushroom6" unique_id=666722994]
 libraries/ = SubResource("AnimationLibrary_5txvl")
 autoplay = &"floating"
 
-[node name="Area2D" type="Area2D" parent="Mushroom6" unique_id=106508581]
+[node name="Area2D" type="Area2D" parent="Mushroom6" unique_id=1949298198]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom6/Area2D" unique_id=1539450685]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mushroom6/Area2D" unique_id=1045807365]
 shape = SubResource("CircleShape2D_kwghp")
 
 [node name="GameTimer" parent="." unique_id=48597511 instance=ExtResource("5_0uv5o")]
 position = Vector2(1015, -620)
+
+[connection signal="mushroom_collected" from="Mushroom" to="." method="_on_mushroom_mushroom_collected"]
+[connection signal="mushroom_collected" from="Mushroom2" to="." method="_on_mushroom_mushroom_collected"]
+[connection signal="mushroom_collected" from="Mushroom3" to="." method="_on_mushroom_mushroom_collected"]
+[connection signal="mushroom_collected" from="Mushroom4" to="." method="_on_mushroom_mushroom_collected"]
+[connection signal="mushroom_collected" from="Mushroom5" to="." method="_on_mushroom_mushroom_collected"]
+[connection signal="mushroom_collected" from="Mushroom6" to="." method="_on_mushroom_mushroom_collected"]
