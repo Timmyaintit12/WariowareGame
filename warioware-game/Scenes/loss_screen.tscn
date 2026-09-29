@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bec75qdf7h42h"]
+
+[ext_resource type="Script" uid="uid://ckse5t3v22k83" path="res://Scripts/loss_screen.gd" id="1_0dmjc"]
+[ext_resource type="Texture2D" uid="uid://sligi7owp5t2" path="res://Images/background.jpg" id="2_jhgxs"]
+
+[node name="LossScreen" type="Node2D" unique_id=959998724]
+script = ExtResource("1_0dmjc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1526463814]
+offset_right = 1156.0
+offset_bottom = 665.0
+texture = ExtResource("2_jhgxs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=478731728]
+offset_left = 347.0
+offset_top = 163.0
+offset_right = 784.0
+offset_bottom = 382.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/normal_font_size = 63
+text = "You Lose :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=806035895]
+offset_left = 427.0
+offset_top = 333.0
+offset_right = 700.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 42
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

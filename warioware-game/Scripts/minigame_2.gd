@@ -3,6 +3,7 @@ extends Node2D
 
 var buttons_pressed = 0
 var timer_end = false
+var finished = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,14 +13,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if finished:
+		return
+		
 	if buttons_pressed == 6:
-		if Global.minigames_done > 3:
-			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-		else:
-			Global.minigames_done += 1
-			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
-			
-	if timer_end:
-		Global.lives -= 1
-		Global.minigames_done -= 1
-		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+		finished = true
+		Global.win_minigame()
+	elif timer_end:
+		finished = true
+		Global.lose_life()

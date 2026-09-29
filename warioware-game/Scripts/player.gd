@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
+const EDGE_MARGIN = 30.0
 
 
 func _physics_process(delta: float) -> void:
@@ -23,3 +24,5 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	position.x = clamp(position.x, EDGE_MARGIN, get_viewport_rect().size.x - EDGE_MARGIN)

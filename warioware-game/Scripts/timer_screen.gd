@@ -13,7 +13,7 @@ var time
 func _ready() -> void:
 	await Timer(5.0)
 	
-	if Global.minigames_done < 3:
+	if Global.minigames_done < Global.total_minigames:
 		Global.minigames_done = Global.minigames_done 
 		get_tree().change_scene_to_file("res://Scenes/minigame_" + str(Global.minigames_done + 1) + ".tscn")
 		

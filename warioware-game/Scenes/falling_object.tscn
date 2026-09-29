@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://qqcygh11rm20"]
+
+[ext_resource type="Texture2D" uid="uid://dagyh02bbin0y" path="res://Images/mushroom.png" id="1_hla5v"]
+[ext_resource type="Script" uid="uid://ovvu5tuvfrju" path="res://Scripts/falling_object.gd" id="1_yw4xl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hla5v"]
+radius = 38.327538
+
+[node name="FallingObject" type="Area2D" unique_id=1075341958]
+script = ExtResource("1_yw4xl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=322591152]
+position = Vector2(-3.8146973e-06, -5.722046e-06)
+scale = Vector2(0.030569168, 0.03056917)
+texture = ExtResource("1_hla5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=677046703]
+shape = SubResource("CircleShape2D_hla5v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

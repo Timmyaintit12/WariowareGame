@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://d4dfl2axmxpyn"]
+
+[ext_resource type="Script" uid="uid://ca7t8f2othoyp" path="res://Scripts/minigame_3.gd" id="1_asmx3"]
+[ext_resource type="PackedScene" uid="uid://bww63ahbbvmhj" path="res://Scenes/Player.tscn" id="2_h40nw"]
+[ext_resource type="Texture2D" uid="uid://su8q2j0ojo3a" path="res://Images/sky.jpg" id="2_we0jk"]
+[ext_resource type="PackedScene" uid="uid://ddtqwq53a0wuq" path="res://Scenes/game_timer.tscn" id="3_ihkhm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wtki"]
+size = Vector2(1150, 48)
+
+[node name="Minigame_3" type="Node2D" unique_id=961907827]
+script = ExtResource("1_asmx3")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1840564346]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=303260958]
+offset_right = 1144.0
+offset_bottom = 647.0
+texture = ExtResource("2_we0jk")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=816433726]
+position = Vector2(0, 614)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1142235362]
+position = Vector2(576, 24)
+shape = SubResource("RectangleShape2D_2wtki")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=774284621]
+offset_right = 1149.0
+offset_bottom = 47.0
+color = Color(0.09803922, 1, 1, 1)
+
+[node name="Player" parent="." unique_id=862217075 instance=ExtResource("2_h40nw")]
+position = Vector2(505, 486)
+
+[node name="GameTimer" parent="." unique_id=48597511 instance=ExtResource("3_ihkhm")]
+position = Vector2(1021, -6)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=947311069]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
